@@ -1,10 +1,13 @@
-<div>
+-<div>
 <style>
-.rectangle
-{
+
+
+/* CSS for header*/
+
+.rectangle {
   width: auto;
   background-color: #ED8B00;
-  background-size:cover;
+   background-size:cover;
   text-align:left;
   color: white;
   position: relative;
@@ -15,34 +18,20 @@
   height: 60px;
   line-height: 60px;
   font-size: 40px;
+
  }
 
-.underline_hover:hover{
+.hoverunderline:hover {
     text-decoration: underline;
-}
-
-</style>
-</div>
-<div>
-
-<div class="rectangle" style="text-align: left;">
-
-&nbsp;<a href="#" style="color: white;">Homepage</span></a>
-&gt;
-
-&nbsp;<a href="#" style="color: white;">Subpage 1</span></a>
-
-&gt; Subpage 2</div></div>
+    }
 
 
 
-<div>
-<style>
+/* CSS for columns*/
 
 th {
-  background-color: #d7d7d7;
   color: white;
-  font-family: 'Tw Cen MT';
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: normal;
   font-size: 24px;
   padding: 25px;
@@ -50,62 +39,146 @@ th {
   height: 300px;
   width: 250px;
   text-align: left;
-  bottom: auto;
-  right: auto;
-  left: auto;
   vertical-align: top;
   border-left: 14px solid white; 
   border-right: 15px solid white;
-  padding-left: 53px;
-  text-indent: -33px;
+  padding-left: 25px;
   
-
-}
- 
- 
- /* KEEPS THE TEXT IN LINE */
- 
-.test { 
- margin: auto; 
-
-  }
-
-p {
-    margin: 0px;
-    margin-left: -33px;
-    padding: 0;
-    text-indent: 0px;
-    
+  /* Gradient Background*/
+  /* Linear Gradient: Colors in the background*/
+  background: linear-gradient(-45deg, #acacac, #acacac, #eeeeee, #acacac, #d7d7d7);
+  background-size: 300% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
 }
 
+
+/* On hover underline layout*/
+.underline_hover {
+ background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+ background-position: 0 100%;
+ background-repeat: repeat-x;
+ background-size: 4px 4px;
+ transition: background-size .2s;
+}
 
 .underline_hover:hover {
-text-decoration: underline;
-cursor: pointer;
-    
+  background-size: 4px 50px;
+  cursor: pointer;
+  
+}
+
+
+@-webkit-keyframes Gradient {
+ 0% {
+  background-position: 0% 50%
  }
- 
- 
-li { margin-bottom: 10px; }
- 
+ 50% {
+  background-position: 100% 50%
+ }
+ 100% {
+  background-position: 0% 50%
+ }
+}
 
+@-moz-keyframes Gradient {
+ 0% {
+  background-position: 0% 50%
+ }
+ 50% {
+  background-position: 100% 50%
+ }
+ 100% {
+  background-position: 0% 50%
+ }
+}
+
+@keyframes Gradient {
+ 0% {
+  background-position: 0% 50%
+ }
+ 50% {
+  background-position: 100% 50%
+ }
+ 100% {
+  background-position: 0% 50%
+ }
+}
+ 
+ 
+.cmargin { 
+ margin: auto;
+ 
+ }
+
+
+p {
+  margin-bottom: 10px; 
+  
+}
+
+
+li { 
+list-style-type: none;
+margin-bottom: 15px; 
+}
+
+.heading {
+text-align: left;
+font-family: 'Tw Cen MT';
+font-size: 26px;
+}
+
+
+/* mainColor: color of the underline*/
+:root {
+  --mainColor: #e99334;
+}
+
+ 
 </style>
+</div>
 
 
-<!-- Due to limitations imposed by Cornerstone OnDemand, using onclick instead of href for bullet points.-->
 
+<!-- Imports font from Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+
+
+<!-- HTML for header-->
+<div class="rectangle">
+
+&nbsp;<a href="#" style="color: white;">Homepage</a>
+&gt;
+
+&nbsp;<a href="#" style="color: white;">Subpage 1</a>
+
+&gt; Subpage 2
+
+</div>
+
+
+
+<!-- HTML for columns-->
 <table> <tbody> <tr> 
-
 
     
 <!-- Column #1.-->
- <th><span class="test" style="color: black;">
+ <th><span class="cmargin" style="color: black;">
+
+
+
 
 
 
 <!-- Heading of the Column #1-->
-<p style="text-align: left;"><strong>This is heading</strong></p>
-
+<p class="heading"><strong>This is heading</strong></p>
 
 
 <!-- Bulleted points of the Column #1-->
@@ -168,6 +241,3 @@ li { margin-bottom: 10px; }
 
 
 </tr></tbody></table>
-
-
-</div>
