@@ -1,2 +1,3 @@
-# Leader-Link
-Layout of San Jacinto College's new Leader Link homepage featuring deeplinks powered by LinkedIn Learning through Cornerstone OnDemand.
+# Leader Link CSS & HTML Files
+Layout of San Jacinto College's new Leader Link homepage.
+The repository does not include any confidential information and/or the code associated with it.
